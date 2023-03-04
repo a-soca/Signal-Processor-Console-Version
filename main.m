@@ -16,8 +16,15 @@ filterType = input("Please enter the type of filter you would like to apply [1,2
 
 switch filterType % Depending on the number the user enters, the code corrosponding to this number will run
     case 1 % If 1 is selected, the following code will execute
-        LPF; % Runs the script "LPF"
-        disp("success");
+        ws = input("window size : ");
+        fcUser = input("cutoff : ");
+        windowFunctionGenerator;
+        basicFilterResponseGenerator;
+        filterCoefficientGenerator;
+        applyFilter;
+        plot(yFinal);
+        %LPF; % Runs the script "LPF"
+        %disp("success");
 end
 
 timeToFrequency;
