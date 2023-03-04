@@ -9,4 +9,4 @@ n = [nLHS 0 fliplr(nLHS)]; % Constructs the discrete time index array from the d
 
 
 % Hanning Function
-w = 0.5+0.5*cosd((2*pi*n)/ws); % Creates a window function
+w = 0.5+0.5*cos((2*pi*n)/ws); % Creates a window function
