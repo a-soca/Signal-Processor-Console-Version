@@ -2,7 +2,7 @@ subplot(2,2,1); % Targets top left axes
 plot(y); % Plots the time domain waveform of the initial file
 
 subplot(2,2,2); % Targets the top right axes
-plot(yNew); % Plots the time domain waveform of the processed file
+plot(yFinal); % Plots the time domain waveform of the processed file
 ylim([-1,1]); % Limits the y axis to the same scale as the initial file to visually reflect the change in amplitudes
 
 
