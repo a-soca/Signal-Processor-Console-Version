@@ -1,0 +1,1 @@
+audiowrite("processed.wav", yFinal, fs); % Writes the array of amplitudes to an audio file

@@ -20,10 +20,10 @@ switch filterType % Depending on the number the user enters, the code corrospond
         findCutoff(); % Finds the lower and upper cutoff frequencies around the central selected cutoff frequency
         hd(n~=0) = 2*fc1*(sin(n(n~=0)*wc)/(n(n~=0)*wc))-2*fc2*(sin(n(n~=0)*wc)/(n(n~=0)*wc)); % Generates the basic filter response array when the value for discrete time index is not 0
         hd(n==0) = 1-2*(fc2-fc1); % Generates the basic filter response value when the discrete time index is 0
-end
+end % Ends the switch statement
 
-function [fc1, fc2] = findCutoff()
-    bandwidth = input("Please enter a bandwidth : ");
-    fc1 = (fc-bandwidth/fs)/2;
-    fc2 = (fc+bandwidth/fs)/2;
-end
+function [fc1, fc2] = findCutoff() % Declares function to request the bandwidth of the BP/BS filter from the user and calculates the cutoff frequencies required
+    bandwidth = input("Please enter a bandwidth : "); % Prompts the user to enter a bandwidth for the filter
+    fc1 = (fc-bandwidth/fs)/2; % Finds the lower cutoff frequency
+    fc2 = (fc+bandwidth/fs)/2; % Finds the upper cutoff frequency
+end % Ends the function

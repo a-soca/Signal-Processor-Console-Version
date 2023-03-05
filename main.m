@@ -6,7 +6,7 @@ clf; % Clears plotted figures
 fullPath = append(path, file); % Converts the filename and path to a single string to be read by the audioread function
 
 [y, fs] = audioread(fullPath); % Creates a matrix storing the amplitude data for the audio file and a variable to store the sample rate of the file
-%t = 0:(1/fs):length(y)-1; % Creates an array of the time each sample is located
+t = (0:1:length(y)-1)/fs; % Creates an array of the time each sample is located
 
 channelNum = size(y,2); % Stores the number of channels of audio in the file
 
