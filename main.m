@@ -24,3 +24,7 @@ applyFilter;
 timeToFrequency;
 
 plotData;
+
+if input("Export audio? [1/0] : ")
+    exportAudio; % Exports the processed file
+end
