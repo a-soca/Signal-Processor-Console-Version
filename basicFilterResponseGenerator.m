@@ -1,6 +1,9 @@
 fc = fcUser/fs; % Normalises the cutoff frequency
 wc = 2*pi*fc; % Calculates the angular cutoff frequency and stores it as a variable
 
+fprintf("1 : LPF \n2 : HPF \n3 : BPF \n4 : BSF\n\n"); % Prints the filter options in the console
+filterType = input("Please enter the type of filter you would like to apply [1,2,3,4] : "); % Prompts the user to select a filter type
+
 switch filterType % Depending on the number the user enters, the code corrosponding to this number will run
     case 1 % If 1 is selected, the following code will execute
         % Low pass filter
