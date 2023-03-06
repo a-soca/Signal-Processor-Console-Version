@@ -18,4 +18,7 @@ plotData;
 
 if input("Export audio? [1/0] : ")
     exportAudio; % Exports the processed file
+    fprintf("File Exported, Program ended successfully");
+else
+    fprintf("Program ended successfully");
 end
