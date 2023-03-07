@@ -7,7 +7,7 @@ fprintf("1 : LPF \n2 : HPF \n3 : BPF \n4 : BSF\n\n"); % Prints the filter option
 % - User input must be 1, 2, 3 or 4
 filterType = NaN; % Initialises filterType to an option which will return false in menuValidation function to allow the loop to proceed
 while ~menuValidation([1,2,3], filterType) % Loops the following until valid user input is provided (Input validation routine)
-    filterType = input("Please enter the type of filter you would like to apply [1,2,3,4] : "); % Prompts the user to select a filter type
+    filterType = str2double(input("Please enter the type of filter you would like to apply [1,2,3,4] : ", 's')); % Prompts the user to select a filter type
 end % Ends the loop
 
 switch filterType % Depending on the number the user enters, the code corrosponding to this number will run

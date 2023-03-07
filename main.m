@@ -19,10 +19,10 @@ while true % Loops until valid input is provided
     end % Ends the try statement
 end % ends the while loop
 
-%fcUser = 0; % Initialises fcUser to a value which is not valid so that the while loop is entered
-%while fcUser < 0 || fcUser > 20000 % Loops while ws is not between 0 and 20000
-    fcUser = input("Please enter a cutoff frequency [0-20000] : "); % Prompts the user to input a cutoff frequency
-%end % Ends while loop
+fcUser = 0; % Initialises fcUser to a value which is not valid so that the while loop is entered
+while isnan(fcUser) || fcUser <= 0 || fcUser > 20000 % Loops while ws is not between 0 and 20000
+    fcUser = str2double(input("Please enter a cutoff frequency [0-20000] : ", 's')); % Prompts the user to input a cutoff frequency
+end % Ends while loop
 
 windowFunctionGenerator;
 basicFilterResponseGenerator;

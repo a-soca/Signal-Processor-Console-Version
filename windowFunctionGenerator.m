@@ -11,7 +11,7 @@ fprintf("1 : Hanning Function \n2 : Hamming Function \n3 : Blackman Function\n\n
 % - User input must be 1, 2 or 3
 wType = NaN; % Initialises wType to an option which will return false in menuValidation function to allow the loop to proceed
 while ~menuValidation([1,2,3], wType) % Loops the following until valid user input is provided (Input validation routine)
-    wType = input("Please select the type of window function [1,2,3]: "); % Prompts user to specify which type of window function to generate
+    wType = str2double(input("Please select the type of window function [1,2,3]: ", 's')); % Prompts user to specify which type of window function to generate
 end % Ends the loop
 
 switch wType % Depending on the number input by the user, one of the following options will be executed
