@@ -4,10 +4,18 @@ clf; % Clears plotted figures
 
 importAudio;
 
-%ws = 0; % Initialises ws to a value which is not valid so that the while loop is entered
-%while rem(ws,2) == 0 % Loops while ws is not odd
-    ws = input("Please enter a window size (This number must be odd) : "); % Prompts the user to input a window size
-%end % Ends while loop
+while true % Loops until valid input is provided
+    try % Attempts to convert user input to an integer
+        ws = int(input("Please enter a window size (This number must be odd) : ")); % Prompts the user to input a window size
+        if ~rem(ws,2) % if the number input is odd, the following code will execute
+            break % Exits the while loop as the process was successful
+        else % If the number input is even, the following code will execute
+            fprintf("Number must be an odd. Please try again.\n"); % Prints an error message
+        end % ends the if statement
+    catch % If the process fails, the following code will execute
+        fprintf("Window size must be an odd integer. Please try again.\n"); % Prints an error message
+    end % Ends the try statement
+end % ends the while loop
 
 %fcUser = 0; % Initialises fcUser to a value which is not valid so that the while loop is entered
 %while fcUser < 0 || fcUser > 20000 % Loops while ws is not between 0 and 20000
