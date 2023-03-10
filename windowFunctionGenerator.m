@@ -1,9 +1,6 @@
-nLHS = zeros(1,ws-1); % Preallocates memory for array to increase efficiency
-for i = 1:ws-1 % Loops the following for one less time than the user selected window size
-    nLHS(i) = ws-i; % Creates a descending array from one less than the window size to 1
-end % ends the for loop
+nRHS = 1:(ws-1)/2; % Creates a vector from 1 to one less than half the window size
 
-n = [nLHS 0 fliplr(nLHS)]; % Constructs the discrete time index array from the descending number array generated previously
+n = [fliplr(nRHS) 0 nRHS]; % Constructs the discrete time index array from the ascending number vector generated previously (nRHS)
 
 fprintf("1 : Hanning Function \n2 : Hamming Function \n3 : Blackman Function\n\n"); % Displays a list of options in the console
 
