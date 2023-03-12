@@ -10,8 +10,8 @@
 
 
 yFinal = zeros(1, length(y));
-for n = ws:length(y)
+for i = ws:length(y)
     for k = 1:ws
-        yFinal(n) = yFinal(n) + h(k) * y(n-k+1);
+        yFinal(i) = yFinal(i) + h(k) * y(i-k+1);
     end
 end
