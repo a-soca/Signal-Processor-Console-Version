@@ -9,9 +9,16 @@
 
 
 
+
+%h=reshape(h,[ws,1]);
+%y=reshape(y,[length(y),1]);
 yFinal = zeros(1, length(y));
-for i = ws:length(y)
+%yFinal = sum(h.*y,2);
+
+%convert this into matrix multiplication and add multi channel
+for i = ws:length(y)    
     for k = 1:ws
         yFinal(i) = yFinal(i) + h(k) * y(i-k+1);
     end
 end
+

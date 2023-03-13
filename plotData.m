@@ -31,13 +31,15 @@ ylabel("Amplitude"); % Adds a label to the y axis
 xlabel("Frequency /Hz"); % Adds a label to the x axis
 grid on;
 
-% stem for wf and hd and filter coefficient
+% plot window function here
 
 subplot(3,2,5); % Targets the bottom left axes
-plot(hd);
+stem(hd);
+xlim([0 ws]);
 title("Basic Filter Response");
 
 subplot(3,2,6); % Targets the bottom right axes
 stem(h);
+xlim([0 ws]);
 title("Filter Coefficients");
 
