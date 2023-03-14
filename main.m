@@ -25,6 +25,7 @@ basicFilterResponseGenerator;
 filterCoefficientGenerator;
 applyFilter;
 timeToFrequency;
+filterResponseGenerator;
 
 plotData;
 
