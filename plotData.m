@@ -47,11 +47,11 @@ xlim([0, 20000]); % Limits the range of x values to that of the audible frequenc
 
 subplot(4,2,7); % Targets the lower middle left axes
 stem(hd, 'color', 'k');
-xlim([0 ws]);
+xlim([1 ws]);
 title("Basic Filter Response");
 
 subplot(4,2,8); % Targets the lower middle right axes
 stem(h, 'color', 'k');
-xlim([0 ws]);
+xlim([1 ws]);
 title("Filter Coefficients");
 
