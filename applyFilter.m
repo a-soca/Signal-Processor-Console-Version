@@ -1,11 +1,15 @@
 % Currently this only works for single channel audio
 
-yFinal = zeros(1,length(y)); 
+yFinal = zeros(channelNum, length(y)); 
 
 %     \/WORKING With matrix method\/
-for i = 1:length(y)-ws+1
-    yFinal(i:i+ws-1) = yFinal(i:i+ws-1) + h.*y(i+ws-1);
+for c = 1:channelNum
+    for i = 1:length(y)-ws+1
+        yFinal(c, i:i+ws-1) = yFinal(c, i:i+ws-1) + h.*y(i+ws-1, c);
+    end
 end
+
+yFinal = reshape(yFinal, [length(yFinal), channelNum]);
 
 %     \/WORKING\/
 %for i = ws:length(y)
