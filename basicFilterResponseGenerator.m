@@ -1,13 +1,13 @@
 fc = fcUser/fs; % Normalises the cutoff frequency
 wc = 2*pi*fc; % Calculates the angular cutoff frequency and stores it as a variable
 
-fprintf("1 : LPF \n2 : HPF \n3 : BPF \n4 : BSF\n\n"); % Prints the filter options in the console
+fprintf("\n1 : LPF \n2 : HPF \n3 : BPF \n4 : BSF\n\n"); % Prints the filter options in the console
 
 % Conditions for validity : 
 % - User input must be 1, 2, 3 or 4
 filterType = str2double(input("Please enter the type of filter you would like to apply [1,2,3,4] : ", 's')); % Prompts the user to select a filter type
 while ~ismember([1,2,3,4], filterType) % Loops the following until valid user input is provided (Input validation routine)
-    fprintf(2, "Input must be 1, 2 or 3. Please try again.\n");
+    fprintf(2, "\nInput must be 1, 2 or 3. Please try again.\n");
     filterType = str2double(input("Please enter the type of filter you would like to apply [1,2,3,4] : ", 's')); % Prompts the user to select a filter type
 end % Ends the loop
 
@@ -33,7 +33,11 @@ switch filterType % Depending on the number the user enters, the code corrospond
 end % Ends the switch statement
 
 function [fc1, fc2, wc1, wc2] = findCutoff(fc, fs) % Declares function to request the bandwidth of the BP/BS filter from the user and calculates the cutoff frequencies required
-    bandwidth = input("Please enter a bandwidth : "); % Prompts the user to enter a bandwidth for the filter
+    bandwidth = input("\nPlease enter a bandwidth : "); % Prompts the user to enter a bandwidth for the filter
+    while bandwidth <= 0 || bandwidth > 20000 || isalpha(bandwidth)
+        fprintf(2, "\nInput must be greater than 0 and less than 20000. Please try again");
+        bandwidth = input("Please enter a bandwidth : "); % Prompts the user to enter a bandwidth for the filter
+    end
     fc1 = fc-(bandwidth/fs)/2; % Finds the lower cutoff frequency
     wc1 = 2*pi*fc1;
     fc2 = fc+(bandwidth/fs)/2; % Finds the upper cutoff frequency

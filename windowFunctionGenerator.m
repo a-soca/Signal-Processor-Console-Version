@@ -2,13 +2,13 @@ nRHS = 1:(ws-1)/2; % Creates a vector from 1 to one less than half the window si
 
 n = [fliplr(nRHS) 0 nRHS]; % Constructs the discrete time index array from the ascending number vector generated previously (nRHS)
 
-fprintf("1 : Hanning Function \n2 : Hamming Function \n3 : Blackman Function\n\n"); % Displays a list of options in the console
+fprintf("\n1 : Hanning Function \n2 : Hamming Function \n3 : Blackman Function\n"); % Displays a list of options in the console
 
 % Conditions for validity : 
 % - User input must be 1, 2 or 3
-wType = str2double(input("Please select the type of window function [1,2,3]: ", 's')); % Prompts user to specify which type of window function to generate
+wType = str2double(input("\nPlease select the type of window function [1,2,3]: ", 's')); % Prompts user to specify which type of window function to generate
 while ~ismember([1,2,3], wType) % Loops the following until valid user input is provided (Input validation routine)
-    fprintf(2, "Input must be 1, 2 or 3. Please try again.\n");
+    fprintf(2, "\nInput must be 1, 2 or 3. Please try again.\n");
     wType = str2double(input("Please select the type of window function [1,2,3]: ", 's')); % Prompts user to specify which type of window function to generate
 end % Ends the loop
 

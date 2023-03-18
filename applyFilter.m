@@ -1,5 +1,7 @@
 % Currently this only works for single channel audio
 
+fprintf(2, "\nApplying filter. Please wait...\n");
+
 yFinal = zeros(channelNum, length(y)); 
 
 %     \/WORKING With matrix method\/
