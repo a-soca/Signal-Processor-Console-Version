@@ -13,13 +13,13 @@ while ~ismember([1,2,3], wType) % Loops the following until valid user input is 
 end % Ends the loop
 
 switch wType % Depending on the number input by the user, one of the following options will be executed
-    case 1
+    case 1 % If the user selected 1, the following code will execute
         % Hanning Function
         w = 0.5 + 0.5*cos((2*pi*n)/ws); % Creates the Hanning window function
-    case 2
+    case 2 % If the user selected 2, the following code will execute
         % Hamming Function
         w = 0.54 + 0.46*cos((2*pi*n)/ws); % Creates the Hamming window function
-    case 3
+    case 3 % If the user selected 3, the following code will execute
         % Blackman Function
         w = 0.42 + 0.5*cos((2*pi*n)/(ws-1)); % Creates the Blackman window function
 end % Ends the switch statement

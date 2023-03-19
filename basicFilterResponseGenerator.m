@@ -34,12 +34,12 @@ end % Ends the switch statement
 
 function [fc1, fc2, wc1, wc2] = findCutoff(fc, fs) % Declares function to request the bandwidth of the BP/BS filter from the user and calculates the cutoff frequencies required
     bandwidth = input("\nPlease enter a bandwidth : "); % Prompts the user to enter a bandwidth for the filter
-    while bandwidth <= 0 || bandwidth > 20000 || isalpha(bandwidth)
-        fprintf(2, "\nInput must be greater than 0 and less than 20000. Please try again");
+    while bandwidth <= 0 || bandwidth > 20000 || isalpha(bandwidth) % If the user inputs a value which is less than or equal to 0, more than 20000 or is not a number, the following code will execute in a loop until a valid input is provided
+        fprintf(2, "\nInput must be greater than 0 and less than 20000. Please try again"); % Prints an error message to the console
         bandwidth = input("Please enter a bandwidth : "); % Prompts the user to enter a bandwidth for the filter
-    end
+    end % Ends the while loop
     fc1 = fc-(bandwidth/fs)/2; % Finds the lower cutoff frequency
-    wc1 = 2*pi*fc1;
+    wc1 = 2*pi*fc1; % Calculates the lower angular cutoff frequency
     fc2 = fc+(bandwidth/fs)/2; % Finds the upper cutoff frequency
-    wc2 = 2*pi*fc2;
+    wc2 = 2*pi*fc2; % Calculates the upper angular cutoff frequency
 end % Ends the function
