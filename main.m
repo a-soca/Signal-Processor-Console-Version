@@ -26,11 +26,12 @@ end % Ends while loop
 windowFunctionGenerator; % Calls the script used to generate the window function vector
 basicFilterResponseGenerator; % Calls the script used to generate the basic filter response vector
 filterCoefficientGenerator; % Calls the script used to generate the array of filter coefficients
+filterResponseGenerator; % Calls the script used to find the filter response using the coefficients generated previously
 
 applyFilter; % Calls the script used to convolute the imported audio and output a filtered matrix
 
 timeToFrequency; % Calls the script used to calculate the frequency spectrum of the initial and processed audio
-filterResponseGenerator; % Calls the script used to find the filter response using the coefficients generated previously
+
 
 plotData; % Calls the script used to plot the data imported/calculated in a figure containing multiple sub plots
 
