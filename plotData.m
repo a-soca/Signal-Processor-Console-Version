@@ -14,8 +14,8 @@ xlabel("Time /s"); % Adds a label to the x axis (time is currently not in second
 grid on;
 
 subplot(4,2,3); % Targets the upper middle left axes
-plot(xFreq, yFreqInit, 'color', 'k'); % Plots the frequency domain amplitudes of the initial file
-ylim([0, max(yFreqInit)]);
+plot(xFreq, yAmpInit, 'color', 'k'); % Plots the frequency domain amplitudes of the initial file
+ylim([0, max(yAmpInit)]);
 xlim([0 20000]);
 title("Initial Frequency Spectrum"); % Adds title to graph
 ylabel("Amplitude"); % Adds a label to the y axis
@@ -23,9 +23,9 @@ xlabel("Frequency /Hz"); % Adds a label to the x axis
 grid on;
 
 subplot(4,2,4); % Targets the upper middle right axes
-plot(xFreq, yFreqFinal, 'color', 'k'); % Plots the frequency domain amplitudes of the processed file
+plot(xFreq, yAmpFinal, 'color', 'k'); % Plots the frequency domain amplitudes of the processed file
 xlim([0 20000]);
-ylim([0, max(yFreqInit)]); % Limits the y axis to the maximum amplitude of the initial frequency spectrum to visually reflect the change in amplitudes of the processed file
+ylim([0, max(yAmpInit)]); % Limits the y axis to the maximum amplitude of the initial frequency spectrum to visually reflect the change in amplitudes of the processed file
 title("Processed Frequency Spectrum"); % Adds title to graph
 ylabel("Amplitude"); % Adds a label to the y axis
 xlabel("Frequency /Hz"); % Adds a label to the x axis

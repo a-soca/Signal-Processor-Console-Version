@@ -1,4 +1,3 @@
-
 % If the user closes the window instead of selecting a file, the program
 % will crash which is why a try method is used in this case.
 try % Attempts the following code
