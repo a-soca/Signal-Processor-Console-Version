@@ -31,8 +31,6 @@ filterResponseGenerator; % Calls the script used to find the filter response usi
 applyFilter; % Calls the script used to convolute the imported audio and output a filtered matrix
 
 timeToFrequency; % Calls the script used to calculate the frequency spectrum of the initial and processed audio
-
-
 plotData; % Calls the script used to plot the data imported/calculated in a figure containing multiple sub plots
 
 export = input("\nExport audio? [y/n] : ", "s"); % Prompts the user to enter y/n for exporting the filtered audio to a .wav file
