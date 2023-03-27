@@ -46,12 +46,12 @@ ylabel('Amplitude'); % Labels the y axis
 xlim([0, 20000]); % Limits the range of x values to that of the audible frequency spectrum
 
 subplot(4,2,7); % Targets the lower middle left axes
-stem(hd, 'color', 'k');
-xlim([1 ws]);
-title("Basic Filter Response");
+stem(hd, 'color', 'k'); % Plots the basic filter response with a stem plot
+xlim([1 ws]); % Limits the range of values for the x axis
+title("Basic Filter Response"); % Adds a title
 
 subplot(4,2,8); % Targets the lower middle right axes
 stem(h, 'color', 'k');
-xlim([1 ws]);
-title("Filter Coefficients");
+xlim([1 ws]); % Limits the range of values for the x axis
+title("Filter Coefficients"); % Adds a title
 
