@@ -1,7 +1,7 @@
 # Signal Processor (Console Version)
 
 ## Aims
-This MATLAB application algorithmically suppresses noise and isolates frequencies in audio files using finite impulse response filtering. It also provides visualisation for the frequency spectrum for both the processed and unprocessed files. The generated filter attributes such as amplitude response, phase response, basic filter response and filter coefficients are also visualised.
+This MATLAB script algorithmically suppresses noise and isolates frequencies in audio files using finite impulse response filtering. It also provides visualisation for the frequency spectrum for both the processed and unprocessed files. The generated filter attributes such as amplitude response, phase response, basic filter response and filter coefficients are also visualised.
 
 ## Features
 - High pass, Low pass, Band pass and Band stop filters
