@@ -1,4 +1,4 @@
-# Signal-Processor-V2
+# Signal Processor (Console Version)
 
 ## Dependencies:
 This program requires **one** of the following MATLAB add-ons:
